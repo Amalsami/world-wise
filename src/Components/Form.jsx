@@ -11,7 +11,7 @@ import DatePicker from "react-datepicker";
 import { UseCitiesContext } from "../Contexts/CitiesContext";
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client?";
-export function convertToEmoji(countryCode) {
+function convertToEmoji(countryCode) {
   const codePoints = countryCode
     .toUpperCase()
     .split("")
