@@ -42,12 +42,16 @@ A React application to explore, manage, and visualize cities and countries world
    ```
 
 2. Install dependencies:
+
+   ```
    npm install
 
    ```
 
-   ```
-
 3. Start app:
-   npm run server: Starts the fake API server for handling CRUD operations.
-   npm run dev: Starts the development server for the React app.
+
+```
+  npm run server: Starts the fake API server for handling CRUD operations.
+  npm run dev: Starts the development server for the React app.
+
+```
