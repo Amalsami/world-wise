@@ -2,7 +2,6 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 
 const CitiesProvider = createContext();
 const url = "http://localhost:8000";
-
 // eslint-disable-next-line react/prop-types
 const CitiesContext = ({ children }) => {
   const [cities, setCities] = useState([]);
@@ -54,8 +53,7 @@ const CitiesContext = ({ children }) => {
         headers: { "Content-Type": "application/json" },
       });
       const data = await res.json();
-      console.log(res);
-      console.log(data);
+      setCities((prev) => [...prev, data]);
 
       // setCurrentCity(data);
     } catch (error) {

@@ -9,6 +9,9 @@ import Spinner from "./Spinner";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import { UseCitiesContext } from "../Contexts/CitiesContext";
+import { useNavigate } from "react-router-dom";
+import Button from "./Button";
+import BackButton from "./BackButton";
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client?";
 function convertToEmoji(countryCode) {
@@ -21,7 +24,7 @@ function convertToEmoji(countryCode) {
 
 function Form() {
   const [lat, lng] = useUrlParams();
-  const { postCity } = UseCitiesContext();
+  const { postCity, loading } = UseCitiesContext();
 
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");
@@ -30,6 +33,7 @@ function Form() {
   const [cityLoading, setCityLoading] = useState(false);
   const [maprror, setMapError] = useState("");
   const [emoji, setEmoji] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchCity() {
@@ -56,7 +60,7 @@ function Form() {
     }
     fetchCity();
   }, [lat, lng]);
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     console.log(e);
     const newCity = {
@@ -67,9 +71,9 @@ function Form() {
       notes,
       position: { lat, lng },
     };
-    console.log(newCity);
 
-    postCity(newCity);
+    await postCity(newCity);
+    navigate("/app/cities");
   }
   if (maprror) {
     return <Message message={maprror}></Message>;
@@ -78,7 +82,10 @@ function Form() {
     return <Spinner />;
   }
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.form} ${loading && styles.loading}`}
+      onSubmit={handleSubmit}
+    >
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
 
@@ -114,8 +121,8 @@ function Form() {
       </div>
 
       <div className={styles.buttons}>
-        <button>Add</button>
-        <button>&larr; Back</button>
+        <Button type="primary">Add</Button>
+        <BackButton />
       </div>
     </form>
   );
