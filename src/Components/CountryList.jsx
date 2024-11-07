@@ -5,10 +5,10 @@ import styles from "./CountryList.module.css";
 import CountryItem from "./CountryItem";
 import Spinner from "./Spinner";
 import Message from "./Message";
-import { UseCitiesContext } from "../Contexts/CitiesContext";
+import { useCitiesContext } from "../Contexts/CitiesContext";
 
 export default function CountryList() {
-  const { loading, cities } = UseCitiesContext();
+  const { loading, cities } = useCitiesContext();
 
   if (loading) {
     return <Spinner />;

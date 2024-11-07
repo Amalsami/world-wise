@@ -8,11 +8,11 @@ import {
   useMap,
   useMapEvents,
 } from "react-leaflet";
-import { UseCitiesContext } from "../Contexts/CitiesContext";
+import { useCitiesContext } from "../Contexts/CitiesContext";
 import { useNavigate } from "react-router-dom";
 import { useUrlParams } from "../Hooks/useUrlParams";
 export default function Map() {
-  const { cities } = UseCitiesContext();
+  const { cities } = useCitiesContext();
   const [position, setPosition] = useState([40, 0]);
   const [lat, lng] = useUrlParams();
 

@@ -8,7 +8,7 @@ import Message from "./Message";
 import Spinner from "./Spinner";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
-import { UseCitiesContext } from "../Contexts/CitiesContext";
+import { useCitiesContext } from "../Contexts/CitiesContext";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import BackButton from "./BackButton";
@@ -24,7 +24,7 @@ function convertToEmoji(countryCode) {
 
 function Form() {
   const [lat, lng] = useUrlParams();
-  const { postCity, loading } = UseCitiesContext();
+  const { postCity, loading } = useCitiesContext();
 
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");

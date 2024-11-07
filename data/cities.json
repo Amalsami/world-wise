@@ -49,78 +49,6 @@
       "id": 98443202
     },
     {
-      "cityName": "Almassora",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-25T12:35:23.607Z",
-      "notes": "try",
-      "position": {
-        "lat": "39.94423404318772",
-        "lng": "-0.032429266711746514"
-      },
-      "id": 98443203
-    },
-    {
-      "cityName": "Almassora",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-25T12:35:23.607Z",
-      "notes": "try",
-      "position": {
-        "lat": "39.94423404318772",
-        "lng": "-0.032429266711746514"
-      },
-      "id": 98443204
-    },
-    {
-      "cityName": "Almassora",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-25T12:35:23.607Z",
-      "notes": "try",
-      "position": {
-        "lat": "39.94423404318772",
-        "lng": "-0.032429266711746514"
-      },
-      "id": 98443205
-    },
-    {
-      "cityName": "Almassora",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-25T12:35:23.607Z",
-      "notes": "try",
-      "position": {
-        "lat": "39.94423404318772",
-        "lng": "-0.032429266711746514"
-      },
-      "id": 98443206
-    },
-    {
-      "cityName": "Almassora",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-25T12:35:23.607Z",
-      "notes": "try",
-      "position": {
-        "lat": "39.94423404318772",
-        "lng": "-0.032429266711746514"
-      },
-      "id": 98443207
-    },
-    {
-      "cityName": "Castello de la Plana",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-27T07:11:36.745Z",
-      "notes": "final",
-      "position": {
-        "lat": "40.036159910167584",
-        "lng": "-0.013723149191033903"
-      },
-      "id": 98443208
-    },
-    {
       "cityName": "Cartagena",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -143,6 +71,18 @@
         "lng": "2.1555833830765763"
       },
       "id": 98443212
+    },
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2024-11-06T20:28:49.758Z",
+      "notes": "ww",
+      "position": {
+        "lat": "52.56424891090423",
+        "lng": "13.379651106490765"
+      },
+      "id": 98443213
     }
   ]
 }
